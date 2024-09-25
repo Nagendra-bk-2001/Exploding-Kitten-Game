@@ -1,0 +1,377 @@
+/* General body styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  background-image: url('https://www.transparenttextures.com/patterns/foggy-birds.png');
+  margin: 0;
+  padding: 0;
+}
+
+/* Title Page styling */
+.title-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+}
+
+/* Card container for the emojis placed around the page */
+.card-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Individual card styling */
+.card {
+  width: 150px; /* Made the card bigger */
+  height: 180px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  position: absolute;
+  animation: float 4s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* Randomly position the cards */
+.card:nth-child(1) { top: 10%; left: 5%; }
+.card:nth-child(2) { top: 20%; right: 5%; }
+.card:nth-child(3) { bottom: 20%; left: 10%; }
+.card:nth-child(4) { bottom: 10%; right: 10%; }
+
+/* Animation to make the cards float a bit */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Title styling */
+h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+/* Input styling */
+input {
+  padding: 10px;
+  font-size: 1.2rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Button styling */
+button {
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+  background-color: #ff5722;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #e64a19;
+  transform: translateY(-2px);
+}
+
+/*--------------------------------------------------------------------------------------*/
+/* Game Page Styles */
+.game-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: #4caf50;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar-left {
+  font-size: 2rem;
+  margin-left: 20px;
+}
+
+.navbar-center {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.navbar-right {
+  font-size: 1.2rem;
+  margin-right: 20px;
+}
+
+/* Adjusted Game Page Layout */
+.game-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.navbar {
+  background-color: #4caf50;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar-left {
+  font-size: 2rem;
+  margin-left: 20px;
+}
+
+.navbar-center {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.navbar-right {
+  font-size: 1.2rem;
+  margin-right: 20px;
+}
+
+.game-content {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  padding: 100px 20px;
+}
+
+/* Description Area */
+.description-area {
+  flex: 1;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  height: 150px;
+  margin-right: 40px;  /* Increased spacing */
+}
+
+/* History Area */
+.history-area {
+  flex: 1;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  height: 300px;
+  margin-left: 40px;  /* Increased spacing */
+  overflow-y: auto;
+}
+
+/* Card Drawing Area */
+.card-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.draw-button {
+  padding: 12px 24px;
+  font-size: 1.5rem;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.current-card {
+  margin-top: 20px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* History Card Overlap */
+.history-card {
+  position: relative;
+  width: 100px;
+  height: 140px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-bottom: -40px;  /* Overlapping effect */
+  z-index: 1;
+}
+
+.history-card:nth-child(n) {
+  margin-left: 10px;
+}
+
+.game-over-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 80%;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.game-over-dialog h2 {
+  margin-bottom: 15px;
+  color: #e64a19;
+}
+
+/* Leaderboard Styles */
+.leaderboard {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.leaderboard h3 {
+  margin-bottom: 10px;
+  color: #4caf50;
+}
+
+.leaderboard ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.leaderboard li {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.leaderboard-name {
+  font-weight: bold;
+}
+
+.leaderboard-score {
+  color: #2196f3;
+}
+
+/* Scrollbar Styles */
+.leaderboard ul::-webkit-scrollbar {
+  width: 8px;
+}
+
+.leaderboard ul::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.leaderboard ul::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.leaderboard ul::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Restart Button */
+.game-over-dialog button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.game-over-dialog button:hover {
+  background-color: #45a049;
+}
+
+/* Updated Card Area */
+.card-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.draw-button {
+  padding: 12px 24px;
+  font-size: 1.5rem;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.current-card {
+  width: 100px;
+  height: 140px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  padding: 10px;
+}
+
+.current-card span {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.current-card p {
+  margin: 0;
+  text-align: center;
+}
